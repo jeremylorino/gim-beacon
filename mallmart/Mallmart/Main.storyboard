@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IfS-9b-YkM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Mallmart-->
+        <scene sceneID="gSE-WX-wAl">
+            <objects>
+                <viewController id="lB7-2b-6Fb" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQX-Sy-Aal"/>
+                        <viewControllerLayoutGuide type="bottom" id="dxd-Hz-rL2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R8S-VT-U1j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-qm-TSJ">
+                                <rect key="frame" x="122" y="317" width="131" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Lets Get Started!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dVP-7r-bHl" kind="presentation" modalTransitionStyle="crossDissolve" id="THa-fW-ahe"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VqU-UG-N9I">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lB7-2b-6Fb" id="hUx-sI-ifq"/>
+                                    <outlet property="delegate" destination="lB7-2b-6Fb" id="sAV-6Z-Uh4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VqU-UG-N9I" secondAttribute="trailing" id="1kU-Kf-e8E"/>
+                            <constraint firstItem="VqU-UG-N9I" firstAttribute="top" secondItem="hQX-Sy-Aal" secondAttribute="bottom" id="5MX-DH-dc0"/>
+                            <constraint firstItem="VqU-UG-N9I" firstAttribute="top" secondItem="hQX-Sy-Aal" secondAttribute="bottom" id="Fas-fi-5Ml"/>
+                            <constraint firstItem="dxd-Hz-rL2" firstAttribute="top" secondItem="VqU-UG-N9I" secondAttribute="bottom" id="aaX-Xy-Ebv"/>
+                            <constraint firstItem="VqU-UG-N9I" firstAttribute="leading" secondItem="R8S-VT-U1j" secondAttribute="leading" id="hao-pz-Yk4"/>
+                            <constraint firstAttribute="centerX" secondItem="ZHi-qm-TSJ" secondAttribute="centerX" id="pKI-hy-hRH"/>
+                            <constraint firstAttribute="centerY" secondItem="ZHi-qm-TSJ" secondAttribute="centerY" id="vEz-eP-CqX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Fas-fi-5Ml"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mallmart" id="Vzw-n5-nCH">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="pPk-cA-dfJ">
+                            <connections>
+                                <action selector="showPermissions:" destination="lB7-2b-6Fb" id="9cL-Wa-nue"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="getStartedButton" destination="ZHi-qm-TSJ" id="5He-Gh-jj3"/>
+                        <outlet property="tableView" destination="VqU-UG-N9I" id="tLz-jf-UjU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISF-85-GCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1552.5" y="619.5"/>
+        </scene>
+        <!--Opt In View Controller-->
+        <scene sceneID="7mC-k1-Ufu">
+            <objects>
+                <viewController id="dVP-7r-bHl" customClass="GMBLOptInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oeD-tL-Dxn"/>
+                        <viewControllerLayoutGuide type="bottom" id="M2Z-8C-503"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rlL-an-YK8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W9-oq-Pnh">
+                                <rect key="frame" x="128" y="334" width="120" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="maI-8s-w2F"/>
+                                    <constraint firstAttribute="height" constant="40" id="zsx-aU-24h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="ENABLE">
+                                    <color key="titleColor" red="0.090196078430000007" green="0.6588235294" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didEnable" destination="dVP-7r-bHl" eventType="touchUpInside" id="FOz-ca-bNz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VM-D0-fgm">
+                                <rect key="frame" x="157" y="393" width="61" height="30"/>
+                                <state key="normal" title="Not Now">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didNotEnable" destination="dVP-7r-bHl" eventType="touchUpInside" id="6Md-n9-wHq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable location to find nearby Mallmart deals." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="245" translatesAutoresizingMaskIntoConstraints="NO" id="O8x-Wa-Av3">
+                                <rect key="frame" x="53" y="223" width="270" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="174-AD-IiV"/>
+                                    <constraint firstAttribute="height" constant="62" id="aUt-sy-TqU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAV-aL-h0l">
+                                <rect key="frame" x="65" y="615" width="102" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressShowPrivacyPolicy" destination="dVP-7r-bHl" eventType="touchUpInside" id="ubu-5l-J32"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX5-y6-ANo">
+                                <rect key="frame" x="185" y="619" width="5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33Y-ba-XQ7">
+                                <rect key="frame" x="208" y="615" width="96" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Terms of Use">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressShowTermsOfUse" destination="dVP-7r-bHl" eventType="touchUpInside" id="qui-hY-sPh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.6588235294" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="3W9-oq-Pnh" secondAttribute="centerY" constant="-20" id="1fo-SV-Au9"/>
+                            <constraint firstAttribute="centerX" secondItem="LX5-y6-ANo" secondAttribute="centerX" id="22P-6I-ChW"/>
+                            <constraint firstItem="LX5-y6-ANo" firstAttribute="leading" secondItem="CAV-aL-h0l" secondAttribute="trailing" constant="18" id="Bbn-7I-1Qg"/>
+                            <constraint firstAttribute="centerX" secondItem="O8x-Wa-Av3" secondAttribute="centerX" id="F0a-QT-4Jq"/>
+                            <constraint firstItem="3W9-oq-Pnh" firstAttribute="top" secondItem="O8x-Wa-Av3" secondAttribute="bottom" constant="49" id="JVM-rf-77s"/>
+                            <constraint firstAttribute="centerX" secondItem="9VM-D0-fgm" secondAttribute="centerX" id="Jsx-T2-zRG"/>
+                            <constraint firstItem="M2Z-8C-503" firstAttribute="top" secondItem="33Y-ba-XQ7" secondAttribute="bottom" constant="20" id="Lqu-D1-3DE"/>
+                            <constraint firstItem="33Y-ba-XQ7" firstAttribute="leading" secondItem="LX5-y6-ANo" secondAttribute="trailing" constant="18" id="NRl-wK-vX8"/>
+                            <constraint firstAttribute="centerX" secondItem="3W9-oq-Pnh" secondAttribute="centerX" id="ROR-bN-VPr"/>
+                            <constraint firstItem="M2Z-8C-503" firstAttribute="top" secondItem="CAV-aL-h0l" secondAttribute="bottom" constant="20" id="Xiq-0n-chA"/>
+                            <constraint firstItem="M2Z-8C-503" firstAttribute="top" secondItem="LX5-y6-ANo" secondAttribute="bottom" constant="25" id="Zec-W2-fSq"/>
+                            <constraint firstAttribute="centerY" secondItem="9VM-D0-fgm" secondAttribute="centerY" constant="-75" id="qkq-GV-Avd"/>
+                            <constraint firstAttribute="centerY" secondItem="O8x-Wa-Av3" secondAttribute="centerY" constant="80" id="uI3-EH-dYY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uI3-EH-dYY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytR-0y-nNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2091.5" y="619.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PUn-ZR-mRE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IfS-9b-YkM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kZD-Ze-er8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.090196078431372548" green="0.6588235294117647" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lB7-2b-6Fb" kind="relationship" relationship="rootViewController" id="Nvs-d6-7BJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="138-O6-34T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995.5" y="619.5"/>
+        </scene>
+    </scenes>
+</document>

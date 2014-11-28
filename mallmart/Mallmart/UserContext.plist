@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PRODUCTION_API_KEY</key>
+	<string>ffee73db-cd2b-4b9b-917a-a987ded36a57</string>
+	<key>FEATURE_NAME</key>
+	<string>In-store Deals</string>
+	<key>FEATURE_DESCRIPTION</key>
+	<string>Receive exclusive offers, including ones when you are at or near Mallmart stores.</string>
+</dict>
+</plist>
